@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+	<title></title>
+    <link href="styles.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+
+	<body>
+    <div id="wrapper">
+    
+    	<div id="top">
+        	<div id="logo">
+            	<img src="images/banner-1.png"/>
+       	 	 </div>    
+    	</div>
+         
+         <div id="topnav" class="wrap">
+         	<ul id="nav">
+            	
+            	<li><a href="#">WELCOME</a></li>
+                	<ul>
+                    	<li><a href="#">LOG IN</a></li>
+                        <li><a href="#">SIGN UP</a></li>
+                    </ul>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="CustomerSupport.html">SUPPORT</a></li>
+                <li><a href="services">SERVICES</a></li>  	
+                <li><a href="contact.html">CONTACT US</a></li>
+				          
+            </ul>
+            
+         </div>
+         
+         <div id="banner">
+         	<img src="images/banner/image1.png" width="900" height="100" alt="image1" />
+         </div>
+         
+         <div id="content-wraper">
+         	<div id="content">
+           	  <h2> NEW USER REGISTER HERE</h2> 
+      // <form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post">
+<table width="274" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr>
+    <td colspan="2">
+		<div align="center">
+		  <?php 
+		$remarks=$_GET['remarks'];
+		if ($remarks==null and $remarks=="")
+		{
+		echo 'Register Here';
+		}
+		if ($remarks=='success')
+		{
+		echo 'Registration Success';
+		}
+		?>	
+	    </div></td>
+  </tr>
+  <tr>
+    <td width="95"><div align="right">First Name:</div></td>
+    <td width="171"><input type="text" name="fname" /></td>
+  </tr>
+  <tr>
+    <td><div align="right">Last Name:</div></td>
+    <td><input type="text" name="lname" /></td>
+  </tr>
+  <tr>
+    <td><div align="right">Gender:</div></td>
+    <td><input type="text" name="mname" /></td>
+  </tr>
+  <tr>
+    <td><div align="right">Address:</div></td>
+    <td><input type="text" name="address" /></td>
+  </tr>
+  <tr>
+    <td><div align="right">Contact No.:</div></td>
+    <td><input type="text" name="contact" /></td>
+  </tr>
+  <tr>
+    <td><div align="right">Picture:</div></td>
+    <td><input type="text" name="pic" /></td>
+  </tr>
+ <tr>
+    <td><div align="right">Username:</div></td>
+    <td><input type="text" name="username" /></td>
+  </tr>
+ <tr>
+    <td><div align="right">Password:</div></td>
+    <td><input type="text" name="password" /></td>
+  </tr>
+  <tr>
+    <td><div align="right"></div></td>
+    <td><input name="submit" type="submit" value="Submit" /></td>
+  </tr>
+</table>
+</form>   //     
+             </div>
+            	<div id="rightside">
+            		<h2>RETURNING USER LOGIN HERE</h2>
+          			//<form name="loginform" action="login_exec.php" method="post">
+<table width="309" border="0" align="center" cellpadding="2" cellspacing="5">
+  <tr>
+    <td colspan="2">
+		<!--the code bellow is used to display the message of the input validation-->
+		 <?php
+			if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+			echo '<ul class="err">';
+			foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+				echo '<li>',$msg,'</li>'; 
+				}
+			echo '</ul>';
+			unset($_SESSION['ERRMSG_ARR']);
+			}
+		?>
+	</td>
+  </tr>
+   <div align= "center">Login here</div></p>
+  <tr>
+    <td width="116"><div align="center">Username</div></td>
+    <td width="177"><input name="username" type="text" /></td>
+  </tr>
+  <tr>
+    <td><div align="center">Password</div></td>
+    <td><input name="password" type="text" /></td>
+  </tr>
+  <tr>
+    <td><div align="center"></div></td>
+    <td><input name="" type="submit" value="login" /></td>
+  </tr>
+</table>
+</form>//
+          		</div>
+          </div>
+          
+          <div id="footer">
+       		<div id="social-media">
+   			  <p> &copy; Copyright 2013 &bull; All Right Reserved &bull; Group Project  1000 morris ave. Union NJ </p>
+           		<ul>
+           			<li><a href="http://www.facebook.com"><img src="images/1381042803_facebook-logo-square-webtreatsetc.png"></a><a href="http://www.twitter.com"><img src="images/1381107250_twitter-logo-square-webtreatsetc.png" /></a><a href="http://www.email.com"><img src="images/1381042803_facebook-logo-square-webtreatsetc.png" /></a></li>
+                    <li><a href="http://www.facebook.com"><img src="images/facebook.png"></a><a href="http://www.twitter.com"><img src="images/twitter.png"/></a><a href="http://www.email.com"><img src="images/mail.png" /></a></li>
+               		
+       		    </ul>
+           	  </div>
+    	</div>
+         
+    </div>    
+	</body>
+</html>
